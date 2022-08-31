@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "hsl(158, 36%, 37%)",
+              cream: "hsl(30, 38%, 92%)",
+              neutral: {
+                dark: "hsl(212, 21%, 14%)",
+                gray: "hsl(228, 12%, 48%)",
+                white: "hsl(0, 0%, 100%)",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <title>Frontend Mentor | Product preview card component</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@400;700&display=swap");
+      * {
+        font-size: 14px;
+        font-family: "Montserrat", sans-serif;
+      }
+      h3 {
+        font-family: "Fraunces", serif;
+        font-weight: 700;
+      }
+      .price {
+        font-family: "Fraunces", serif;
+      }
+    </style>
+  </head>
+  <body>
+    <main
+      class="bg-cream min-h-[100vh] h-100% flex justify-center items-center"
+    >
+      <div class="container p-4 py-8 flex justify-center items-center">
+        <section
+          class="bg-white grid grid-cols-1 xl:grid-cols-2 max-w-[375px] xl:max-w-[600px] xl:max-h-[425px] rounded-xl overflow-hidden"
+        >
+          <figure class="image">
+            <img
+              src="/images/image-product-desktop.jpg"
+              alt=""
+              class="w-[400px] hidden xl:flex"
+            />
+            <img
+              src="/images/image-product-mobile.jpg"
+              alt=""
+              class="w-[400px] xl:hidden"
+            />
+          </figure>
+          <div class="content p-6 xl:p-10 flex flex-col">
+            <span
+              class="uppercase text-neutral-gray font-bold text-sm tracking-[5px] mb-4"
+              >Perfume</span
+            >
+            <h3 class="text-4xl text-neutral-dark mb-6 xl:w-[90%]">
+              Gabrielle Essence Eau De Parfum
+            </h3>
+            <p class="text-neutral-gray font-bold xl:font-normal">
+              A floral, solar and voluptuous interpretation composed by Olivier
+              Polge, Perfumer-Creator for the House of CHANEL.
+            </p>
+            <div class="flex mt-6 items-center space-x-4">
+              <span class="price text-4xl text-primary">$149.99</span>
+              <span class="text-neutral-gray line-through">$169.99</span>
+            </div>
+            <button
+              class="bg-primary py-3 mt-6 rounded-md text-white font-bold flex items-center justify-center gap-3"
+            >
+              <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z"
+                  fill="#FFF"
+                />
+              </svg>
+              Add to Cart
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Dynerus Parker</a>.
+    </div> -->
+  </body>
+</html>
